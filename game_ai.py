@@ -15,7 +15,7 @@ class PuzzleAI:
         self.load_questions()
 
     def load_questions(self):
-        with open('question_bank.json') as f:
+        with open('question_bank.json', encoding='utf-8') as f:
             self.questions = json.load(f)['questions']
 
     def update_model(self, reaction_time, difficulty, is_correct):
